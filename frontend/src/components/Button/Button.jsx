@@ -1,8 +1,12 @@
-import { StyledButton } from './Button.styled';
+import { StyledButton, StyledButtonTransparent } from './Button.styled';
 
-
-const Button = ({ children, ...props }) => {
+export const Button = ({ children, ...props }) => {
   return <StyledButton type='button' {...props}> {children}</StyledButton>;
 };
 
-export default Button;
+
+
+export const ButtonTransparent = ({ children, ...props }) => {
+  return <StyledButtonTransparent type='button' {...props}> {children}</StyledButtonTransparent>;
+};
+
