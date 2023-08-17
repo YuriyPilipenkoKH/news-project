@@ -28,6 +28,6 @@ export const iconPawprint =
 
 export const iconMenuHamburger = 
 <svg viewBox="0 0 32 32"   width="24"  className="iconMenuHamburger">
-<path  d="M5.333 9.333h21.333M5.333 16h21.333M5.333 22.667h21.333"></path>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M5.333 9.333h21.333M5.333 16h21.333M5.333 22.667h21.333"></path>
 
 </svg>
