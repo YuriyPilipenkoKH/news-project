@@ -1,5 +1,7 @@
 import { iconLogo, iconPawprint } from "../../images/icons";
-import { Button, ButtonTransparent } from "../Button/Button";
+import { Button,  ButtonTransparent,  LogButton,  RegButton  } from "../Button/Button";
+import { StyledLogo } from "../Button/Button.styled";
+
 
 import { Container } from "../Container/Container";
 
@@ -7,12 +9,18 @@ import { Container } from "../Container/Container";
 
 const App =() => {
   return (
-<Container>
-<h1> {iconLogo}</h1>
-<Button>Learn more {iconPawprint}</Button>
-<ButtonTransparent >Learn more {iconPawprint}</ButtonTransparent>
-</Container>
-  );
+  <Container>
+    <StyledLogo>{iconLogo}</StyledLogo>
+    
+ 
+    <Button>Learn more {iconPawprint}</Button>
+    <ButtonTransparent >Learn more {iconPawprint}</ButtonTransparent>
+    <LogButton>Log IN {iconPawprint}</LogButton>
+    <RegButton >Registration </RegButton>
+
+
+  </Container>
+  );  
 }
 
 export default App;
