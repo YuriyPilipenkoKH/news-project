@@ -44,6 +44,6 @@ export const LearnButton = ({ children, ...props }) => {
 
 
 export const RadioButton = ({ children, ...props }) => {
-  return <StyledLearnButton type='button' {...props}> {children}</StyledLearnButton>;
+  return <StyledRadioButton type='button' {...props}> {children}</StyledRadioButton>;
 };
 

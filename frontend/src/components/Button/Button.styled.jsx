@@ -192,8 +192,8 @@ ${buttonStyles} ;
 `;
 
 export const StyledRegButton = styled.button`
-${buttonStyles} ;
- ${ripple} ;
+${buttonStyles} 
+ ${ripple} 
 
 border: 2px solid var(--yellow);
 background-color: var(--fone-color);
@@ -203,22 +203,22 @@ transition: all 0.4s ease;
 
 ${hoverStylesY} ;
 
-  &:hover  {
+  /* &:hover  {
   border: 2px solid transparent;
- }
+ } */
 
 `;
 
 export const StyledOutButton = styled.button`
-${buttonStyles} ;
-${ripple} ;
+${buttonStyles} 
+${ripple} 
 
 border: 2px solid var(--blue);
 background-color: var(--blue);
 color: var(--fone-color);
 width: 135px;
 
-${hoverStylesB} ;
+${hoverStylesB} 
 
  &:hover  {
   border: 2px solid transparent;
@@ -232,9 +232,9 @@ transform: rotate(180deg);
 `;
 
 export const StyledFilterButton = styled.button`
-${buttonStyles} ;
-${ripple} ;
-${hoverStylesTrB} ;
+${buttonStyles} 
+${ripple} 
+${hoverStylesTrB} 
 
 width: 152px;
 `;
@@ -266,9 +266,9 @@ width: 152px;
 
 export const StyledLearnButton = styled.button`
 
-${buttonStyles} ;
-${ripple} ;
-${hoverStylesTrB} ;
+${buttonStyles} 
+${ripple} 
+${hoverStylesTrB} 
 
 width: 152px;
 `;
@@ -278,8 +278,8 @@ width: 152px;
 
 
 export const StyledRadioButton = styled.button`
-${buttonStyles} ;
- ${ripple} ;
+${buttonStyles} 
+ ${ripple} 
 
  border: 2px solid var(--yellow);
 background-color: var(--fone-color);
