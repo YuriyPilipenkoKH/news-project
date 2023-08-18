@@ -27,13 +27,13 @@ export const iconPawprint =
 </svg>
 
 export const iconMenuHamburger = 
-<svg viewBox="0 0 32 32"   width="24"  className="iconMenuHamburger">
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M5.333 9.333h21.333M5.333 16h21.333M5.333 22.667h21.333"></path>
+<svg viewBox="0 0 48 32"   width="24"  className="iconMenuHamburger">
+<path d="M2.667 2.667h42.667M2.667 16h42.667M2.667 29.333h42.667"></path>
 
 </svg>
 
 export const iconFilter = 
 <svg viewBox="0 0 30 32"   width="24"  className="iconFilter">
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M5.333 5.333l6.667 10.667v8l8 4v-12l6.667-10.667h-21.333z"></path>
+<path  d="M5.333 5.333l6.667 10.667v8l8 4v-12l6.667-10.667h-21.333z"></path>
 
 </svg>

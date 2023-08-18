@@ -1,4 +1,4 @@
-import { iconFilter, iconLogo, iconPawprint } from "../../images/icons";
+import { iconFilter, iconLogo, iconMenuHamburger, iconPawprint } from "../../images/icons";
 import {  AddToButton, Button,  ButtonTransparent,  ContactButton,  FilterButton,  LearnButton,  LogButton,  OutButton,  RegButton  } from "../Button/Button";
 import { MdOutlineLogout} from "react-icons/md";
 import { FaRegHeart } from "react-icons/fa";
@@ -14,8 +14,8 @@ const App =() => {
     <StyledLogo>{iconLogo}</StyledLogo>
     
  
-     <Button>Learn more {iconPawprint}</Button>
-    <ButtonTransparent >Learn more {iconPawprint}</ButtonTransparent>
+     <Button>Learn more {iconMenuHamburger}</Button>
+    <ButtonTransparent >Learn more {iconFilter}</ButtonTransparent>
     <LogButton>Log IN {iconPawprint}</LogButton>
     <RegButton >Registration </RegButton>
     {/* <OutButton >  Logout<MdOutlineLogout/></OutButton>
