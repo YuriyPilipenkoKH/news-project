@@ -7,9 +7,9 @@ export const MainContainer = styled.div`
     /* justify-items: center; */
     grid-gap: 25px;
     background-color: var(--white-bg);
-    padding: 0 20px;
+    padding: 20px;
     margin: 0 auto;
-    outline: 1px solid crimson;
+  
     width: 320px;
 
       @media screen and (min-width: 768px) {

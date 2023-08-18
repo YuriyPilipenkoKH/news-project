@@ -1,18 +1,32 @@
-import { iconPawprint } from "../../images/icons";
-import Button from "../Button/Button";
+import { iconFilter, iconLogo, iconPawprint } from "../../images/icons";
+import {  AddToButton, Button,  ButtonTransparent,  ContactButton,  FilterButton,  LearnButton,  LogButton,  OutButton,  RegButton  } from "../Button/Button";
+import { StyledLogo } from "../Button/Button.styled";
+import { MdOutlineLogout} from "react-icons/md";
+import { FaRegHeart } from "react-icons/fa";
+
 import { Container } from "../Container/Container";
 import LoginForm from "../Forms/LoginForm/LoginForm";
 import RegisterForm from "../Forms/RegisterForm/RegisterForm";
 
-const App = () => {
-    return (
-        // <Container>
-        //     <h1> react</h1>
-        //     <Button>Learn more {iconPawprint}</Button>
-        // </Container>
-        // <LoginForm />
-        <RegisterForm />
-    );
-};
+const App =() => {
+  return (
+  <Container>
+    <StyledLogo>{iconLogo}</StyledLogo>
+    
+ 
+    <Button>Learn more {iconPawprint}</Button>
+    <ButtonTransparent >Learn more {iconPawprint}</ButtonTransparent>
+    <LogButton>Log IN {iconPawprint}</LogButton>
+    <RegButton >Registration </RegButton>
+    <OutButton >  Logout<MdOutlineLogout/></OutButton>
+    <FilterButton>Filter{iconFilter} </FilterButton>
+    <AddToButton>Add to <FaRegHeart/> </AddToButton>
+    <ContactButton>Contact</ContactButton>
+    <LearnButton>Contact</LearnButton>
+
+
+  </Container>
+  );  
+}
 
 export default App;
