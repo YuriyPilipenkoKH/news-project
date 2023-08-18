@@ -91,6 +91,30 @@ export const hoverStylesB =`
  }
 
 `
+export const hoverStylesTrB =`
+border: 2px solid var(--blue);
+background-color: var(--fone-color);
+color: var(--blue);
+
+transition: all 0.4s ease; 
+
+& >svg {
+  fill: var(--blue);
+  }
+
+  &:hover  {
+  transition: all 0.4s ease; 
+  background: linear-gradient(to right, #88c7fc, #4da5f3);
+  color: var(--fone-color);
+  border: 2px solid transparent;
+
+  & >svg {
+    transition: all 0.4s ease; 
+    fill: var(--fone-color);
+}
+ }
+
+`
 export const hoverStylesY =`
 & >svg {
 
@@ -210,28 +234,9 @@ transform: rotate(180deg);
 export const StyledFilterButton = styled.button`
 ${buttonStyles} ;
 ${ripple} ;
+${hoverStylesTrB} ;
 
-border: 2px solid var(--blue);
-background-color: var(--fone-color);
-color: var(--blue);
 width: 152px;
-transition: all 0.4s ease; 
-
-& >svg {
-  fill: var(--blue);
-  }
-
-  &:hover  {
-  transition: all 0.4s ease; 
-  background: linear-gradient(to right, #88c7fc, #4da5f3);
-  color: var(--fone-color);
-  border: 2px solid transparent;
-
-  & >svg {
-    transition: all 0.4s ease; 
-    fill: var(--fone-color);
-}
- }
 `;
 
 export const StyleAddToButton = styled.button`
@@ -241,15 +246,32 @@ ${ripple} ;
 border: 2px solid var(--blue);
 background-color: var(--blue);
 color: var(--fone-color);
-width: 135px;
+width: 130px;
 
 ${hoverStylesB} ;
 
- &:hover  {
+&:hover  {
   border: 2px solid transparent;
- }
+}
 `;
 
+export const StyledContactButton = styled.button`
+
+${buttonStyles} ;
+${ripple} ;
+${hoverStylesTrB} ;
+
+width: 152px;
+`;
+
+export const StyledLearnButton = styled.button`
+
+${buttonStyles} ;
+${ripple} ;
+${hoverStylesTrB} ;
+
+width: 152px;
+`;
 
 
 
