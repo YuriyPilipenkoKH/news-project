@@ -9,7 +9,7 @@ export const MainContainer = styled.div`
     background-color: var(--white-bg);
     padding: 20px;
     margin: 0 auto;
-    outline: 1px solid crimson;
+  
     width: 320px;
 
       @media screen and (min-width: 768px) {
