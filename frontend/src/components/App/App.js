@@ -5,8 +5,8 @@ import { FaRegHeart } from "react-icons/fa";
 
 import { StyledLogo } from "../Button/Button.styled";
 import { Container } from "../Container/Container";
-
-
+import LoginForm from "../Forms/LoginForm/LoginForm";
+import RegisterForm from "../Forms/RegisterForm/RegisterForm";
 
 const App =() => {
   return (
