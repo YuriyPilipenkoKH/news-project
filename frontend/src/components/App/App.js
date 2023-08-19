@@ -11,14 +11,29 @@ import RadioContainer from "../RadioContainer/RadioContainer";
 import UniversalButton from "../UniversalButton/UniversalButton";
 import { ModalPopup } from "../ModalPopup/ModalPopup";
 import { modal1 } from "../../modals/modals";
+import { useState } from "react";
 
 const App =() => {
+  const [showModal, setShowModal] = useState(false);
+
+  const onModalOpen = () => {
+    setShowModal(true);
+    console.log(showModal)
+
+  };
+
+  const onModalClose = () => {
+    console.log('onModalClose')
+    setShowModal(false);
+    
+  };
+
   return (
   <Container>
     <StyledLogo>{iconLogo}</StyledLogo>
     
  
-     <Button>Learn more {iconMenuHamburger}</Button>
+     <Button onClick={onModalOpen}>Learn more {iconMenuHamburger}</Button>
     <ButtonTransparent >Learn more {iconFilter}</ButtonTransparent>
     <LogButton>Log IN {iconPawprint}</LogButton>
     <RegButton >Registration </RegButton>
@@ -30,10 +45,11 @@ const App =() => {
     <RadioButton>Learn more</RadioButton> 
     <UniversalButton svg={iconPawprint}>read more</UniversalButton> 
     <RadioContainer></RadioContainer> 
-
-    <ModalPopup {...modal1}></ModalPopup>
-
-
+   
+    {/* <ModalPopup {...modal1}></ModalPopup> */}
+    {showModal && (
+        <ModalPopup {...modal1} /> //  onClose ={onModalClose}   {...modal1} 
+    )}
   </Container>
   );  
 }

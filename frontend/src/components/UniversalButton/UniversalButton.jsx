@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 export const UniversalButton = ({ color, background,  svg,  hoverBackground, hoverColor }) => {
   const buttonStyles = {
@@ -36,12 +36,12 @@ export const UniversalButton = ({ color, background,  svg,  hoverBackground, hov
   );
 };
 
-UniversalButton.propTypes = {
-  color: PropTypes.string.isRequired,
-  background: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
-  hoverBackground: PropTypes.string.isRequired,
-  hoverColor: PropTypes.string.isRequired,
-};
+// UniversalButton.propTypes = {
+//   color: PropTypes.string.isRequired,
+//   background: PropTypes.string.isRequired,
+//   text: PropTypes.string.isRequired,
+//   hoverBackground: PropTypes.string.isRequired,
+//   hoverColor: PropTypes.string.isRequired,
+// };
 
 export default UniversalButton;
