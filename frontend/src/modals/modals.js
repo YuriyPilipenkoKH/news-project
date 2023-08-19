@@ -1,5 +1,6 @@
 import { Button, ButtonTransparent, LogButton, RegButton } from "../components/Button/Button";
 import { iconPawprint } from "../images/icons";
+import { RiDeleteBin6Line } from 'react-icons/ri';
 
 export const modal1 = {     
         width: '608px',
@@ -25,6 +26,6 @@ export const modal2 = {
         buttonText: 'confirm',
         onClose: '' ,
 
-        btn1: <Button>Log IN {iconPawprint}</Button>,
-        btn2:  <ButtonTransparent>Registration </ButtonTransparent>,
+        btn1:  <ButtonTransparent>Cacel</ButtonTransparent>,
+        btn2: <Button>Yes <RiDeleteBin6Line/> </Button>,
 }

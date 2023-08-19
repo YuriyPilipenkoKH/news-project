@@ -14,7 +14,7 @@ export const ModalOverlay = styled.div`
 
 export const ModalContainer = styled.div`
   width: 280px;
-  height: 445px;
+  /* height: 445px; */
   position: relative;
   display: grid;
   place-items: center;
@@ -27,7 +27,7 @@ export const ModalContainer = styled.div`
 
   @media screen and (min-width: 768px) {
     width: 608px;
-    height: 429px;
+    /* height: 429px; */
     padding: 60px 40px;
     border-radius: 40px;
   }
@@ -56,6 +56,7 @@ export const ModalTitle = styled.h2`
   font-size: 24px;
   font-weight: 500;
   margin: 0;
+  text-align: center;
 
   @media screen and (min-width: 768px) {
     font-size: 36px;
@@ -72,7 +73,7 @@ export const ModalText = styled.p`
 
   @media screen and (min-width: 768px) {
     font-size: 20px;
-   padding: 0;
+
   }
 `;
 

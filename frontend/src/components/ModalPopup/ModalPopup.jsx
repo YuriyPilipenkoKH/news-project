@@ -1,14 +1,16 @@
 import React from 'react';
-// import PropTypes from 'prop-types'; //GiCrossedSabres
+import { createPortal } from 'react-dom';
 import { RxCross2 } from "react-icons/rx";
 
 import { BtnContainer,  ModalContainer, ModalImage, ModalOverlay, ModalText, ModalTitle, OnCloseButton } from './ModalPopup.styled';
 
-// const modalRoot = document.querySelector('#modal-root');
+const modalRoot = document.querySelector('#modal-root');
 
 
-export const ModalPopup = ({  title, text, image, buttonColor, buttonText, btn1, btn2 } ) => {
-    return (
+export const ModalPopup = ({  title, text, image, buttonColor, buttonText, btn1, btn2 , onClose } ) => {
+
+
+    return  createPortal(
       <ModalOverlay>
         <ModalContainer >
           <ModalTitle>{title}</ModalTitle>
@@ -21,9 +23,10 @@ export const ModalPopup = ({  title, text, image, buttonColor, buttonText, btn1,
             {btn1}
             {btn2}
           </BtnContainer>
-          <OnCloseButton ><RxCross2/></OnCloseButton>
+          <OnCloseButton onClick={onClose} ><RxCross2/></OnCloseButton>
         </ModalContainer>
-      </ModalOverlay>
+      </ModalOverlay>,
+        modalRoot
      
     );
   };

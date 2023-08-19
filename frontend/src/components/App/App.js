@@ -10,11 +10,12 @@ import { Container } from "../Container/Container";
 import RadioContainer from "../RadioContainer/RadioContainer";
 import UniversalButton from "../UniversalButton/UniversalButton";
 import { ModalPopup } from "../ModalPopup/ModalPopup";
-import { modal1 } from "../../modals/modals";
+import { modal1, modal2 } from "../../modals/modals";
 import { useState } from "react";
 
 const App =() => {
   const [showModal, setShowModal] = useState(false);
+  const [modals, setModals] = useState(modal1)
 
   const onModalOpen = () => {
     setShowModal(true);
@@ -33,8 +34,16 @@ const App =() => {
     <StyledLogo>{iconLogo}</StyledLogo>
     
  
-     <Button onClick={onModalOpen}>Learn more {iconMenuHamburger}</Button>
-    <ButtonTransparent >Learn more {iconFilter}</ButtonTransparent>
+    <Button onClick={() => {
+  setModals(modal1);
+  onModalOpen(); 
+  }}>   
+  Learn more {iconMenuHamburger}</Button>
+
+    <ButtonTransparent onClick={() => {
+  setModals(modal2);
+  onModalOpen(); 
+  }}>Learn more {iconFilter}</ButtonTransparent>
     <LogButton>Log IN {iconPawprint}</LogButton>
     <RegButton >Registration </RegButton>
     <OutButton >  Logout<MdOutlineLogout/></OutButton>
@@ -48,7 +57,7 @@ const App =() => {
    
     {/* <ModalPopup {...modal1}></ModalPopup> */}
     {showModal && (
-        <ModalPopup {...modal1} /> //  onClose ={onModalClose}   {...modal1} 
+        <ModalPopup {...modals} onClose ={onModalClose}  /> //  onClose ={onModalClose}   {...modal1} 
     )}
   </Container>
   );  
