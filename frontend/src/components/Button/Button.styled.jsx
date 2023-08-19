@@ -132,8 +132,8 @@ export const hoverStylesY =`
 export const StyledButton = styled.button`
 
 
-${buttonStyles} ;
- ${ripple} ;
+${buttonStyles} 
+ ${ripple} 
  
  background-color: var(--blue);
  color: var(--fone-color);
@@ -153,8 +153,8 @@ ${buttonStyles} ;
 `;
 
 export const StyledButtonTransparent = styled.button`
-${buttonStyles} ;
-${ripple} ;
+${buttonStyles} 
+${ripple} 
 
 border: 2px solid var(--blue);
 background-color: var(--fone-color);
@@ -181,14 +181,14 @@ transition: all 0.4s ease;
 
 export const StyledLogButton = styled.button`
 
-${buttonStyles} ;
- ${ripple} ;
+${buttonStyles} 
+ ${ripple} 
  
  background-color: var(--yellow);
  color: var(--fone-color);
  width: 165px;
  
- ${hoverStylesY} ;
+ ${hoverStylesY} 
 `;
 
 export const StyledRegButton = styled.button`
@@ -201,7 +201,7 @@ color: var(--yellow);
 width: 165px;
 transition: all 0.4s ease; 
 
-${hoverStylesY} ;
+${hoverStylesY} 
 
   /* &:hover  {
   border: 2px solid transparent;
@@ -257,9 +257,9 @@ ${hoverStylesB} ;
 
 export const StyledContactButton = styled.button`
 
-${buttonStyles} ;
-${ripple} ;
-${hoverStylesTrB} ;
+${buttonStyles} 
+${ripple} 
+${hoverStylesTrB} 
 
 width: 152px;
 `;
@@ -270,7 +270,9 @@ ${buttonStyles}
 ${ripple} 
 ${hoverStylesTrB} 
 
-width: 152px;
+width: 248px;
+height: 38px;
+
 `;
 
 
@@ -281,28 +283,18 @@ export const StyledRadioButton = styled.button`
 ${buttonStyles} 
  ${ripple} 
 
- border: 2px solid var(--yellow);
-background-color: var(--fone-color);
-color: var(--yellow);
-width: 165px;
+
+background-color: var(--light-blue);
+color: var(--blue);
 transition: all 0.4s ease; 
 
-& >svg {
 
-  fill: var(--yellow);
-  }
-
-  &:hover  {
-  transition: all 0.4s ease; 
-  background: linear-gradient(to right, var( --gradient-yl), var(--gradient-yr));
+&>active{
+  background-color: var(--blue);
   color: var(--fone-color);
-  border: 2px solid transparent;
-
-  & >svg {
-    transition: all 0.4s ease; 
-    fill: var(--fone-color);
+  transition: all 0.4s ease; 
 }
- }
+
 
 `;
 
