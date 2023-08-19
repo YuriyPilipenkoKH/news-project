@@ -6,7 +6,7 @@ import { BtnContainer,  ModalContainer, ModalImage, ModalOverlay, ModalText, Mod
 import { LogButton, RegButton } from '../Button/Button';
 import { iconPawprint } from '../../images/icons';
 
-export const ModalPopup = ({ width, height, title, text, image, buttonColor, buttonText, onClose }) => {
+export const ModalPopup = ({ width, height, title, text, image, buttonColor, buttonText, onClose, btn1, btn2 }) => {
     return (
       <ModalOverlay>
         <ModalContainer width={width} height={height}>
@@ -17,8 +17,8 @@ export const ModalPopup = ({ width, height, title, text, image, buttonColor, but
             {buttonText}
           </ModalButton> */}
           <BtnContainer>
-              <LogButton>Log IN {iconPawprint}</LogButton>
-               <RegButton >Registration </RegButton>
+            {btn1}
+            {btn2}
           </BtnContainer>
           <OnCloseButton><RxCross2/></OnCloseButton>
         </ModalContainer>

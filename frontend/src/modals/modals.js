@@ -1,3 +1,5 @@
+import { LogButton, RegButton } from "../components/Button/Button";
+import { iconPawprint } from "../images/icons";
 
 export const modal1 = {     
         width: '608px',
@@ -8,4 +10,7 @@ export const modal1 = {
         buttonColor: '#13d', 
         buttonText: 'confirm',
         onClose: '' ,
+
+        btn1: <LogButton>Log IN {iconPawprint}</LogButton>,
+        btn2:  <RegButton>Registration </RegButton>,
 }
