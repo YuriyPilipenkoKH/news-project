@@ -13,12 +13,13 @@ export const ModalOverlay = styled.div`
 `;
 
 export const ModalContainer = styled.div`
+  position: relative;
   display: grid;
   place-items: center;
   gap: 40px;  
   background-color: white;
   padding: 60px 40px;
-  border-radius: 16px;
+  border-radius: 40px;
   width: ${props => props.width};
   height: ${props => props.height};
 `;
@@ -56,4 +57,21 @@ export const ModalButton = styled.button`
   border: none;
   border-radius: 8px;
   cursor: pointer;
+`;
+
+export const OnCloseButton = styled.button`
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &>svg{
+    color:#222;
+    scale: 2;
+
+  }
 `;
