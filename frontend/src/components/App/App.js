@@ -10,7 +10,7 @@ import { Container } from "../Container/Container";
 import RadioContainer from "../RadioContainer/RadioContainer";
 import UniversalButton from "../UniversalButton/UniversalButton";
 import { ModalPopup } from "../ModalPopup/ModalPopup";
-import { modal1, modal2 } from "../../modals/modals";
+import { modal1, modal2, modal3 } from "../../modals/modals";
 import { useState } from "react";
 
 const App =() => {
@@ -19,13 +19,11 @@ const App =() => {
 
   const onModalOpen = () => {
     setShowModal(true);
-    console.log(showModal)
-
+ 
   };
 
   const onModalClose = () => {
-    console.log('onModalClose')
-    setShowModal(false);
+      setShowModal(false);
     
   };
 
@@ -44,8 +42,13 @@ const App =() => {
   setModals(modal2);
   onModalOpen(); 
   }}>Learn more {iconFilter}</ButtonTransparent>
-    <LogButton>Log IN {iconPawprint}</LogButton>
+
+    <LogButton onClick={() => {
+  setModals(modal3);
+  onModalOpen(); 
+  }}>Log IN {iconPawprint}</LogButton>
     <RegButton >Registration </RegButton>
+
     <OutButton >  Logout<MdOutlineLogout/></OutButton>
     <FilterButton>Filter{iconFilter} </FilterButton>
     <AddToButton>Add to <FaRegHeart/> </AddToButton>

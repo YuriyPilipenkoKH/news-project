@@ -2,6 +2,7 @@ import React from 'react';
 import { createPortal } from 'react-dom';
 import { RxCross2 } from "react-icons/rx";
 
+
 import { BtnContainer,  ModalContainer, ModalImage, ModalOverlay, ModalText, ModalTitle, OnCloseButton } from './ModalPopup.styled';
 
 const modalRoot = document.querySelector('#modal-root');
@@ -10,11 +11,13 @@ const modalRoot = document.querySelector('#modal-root');
 export const ModalPopup = ({  title, text, image, buttonColor, buttonText, btn1, btn2 , onClose } ) => {
 
 
+console.log('image', image)
+
     return  createPortal(
       <ModalOverlay>
         <ModalContainer >
           <ModalTitle>{title}</ModalTitle>
-          {image && <ModalImage src={image} alt="Modal Image" />}
+          {image && <ModalImage src={image.doggy} alt="Modal Image" />}
           <ModalText>{text}</ModalText>
           {/* <ModalButton buttonColor={buttonColor} onClick={onClose}>
             {buttonText}

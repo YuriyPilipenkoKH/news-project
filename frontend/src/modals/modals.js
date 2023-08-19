@@ -1,6 +1,10 @@
+
 import { Button, ButtonTransparent, LogButton, RegButton } from "../components/Button/Button";
 import { iconPawprint } from "../images/icons";
 import { RiDeleteBin6Line } from 'react-icons/ri';
+import doggy from '../images/doggy.png';
+
+
 
 export const modal1 = {     
         width: '608px',
@@ -22,6 +26,21 @@ export const modal2 = {
         title: 'Delete adverstiment?',
         text: 'Are you sure you want to delete  “Cute dog looking for a home”? You can’t undo this action.',
         image: '',
+        buttonColor: '#13d', 
+        buttonText: 'confirm',
+        onClose: '' ,
+
+        btn1:  <ButtonTransparent>Cacel</ButtonTransparent>,
+        btn2: <Button>Yes <RiDeleteBin6Line/> </Button>,
+}
+
+
+export const modal3 = {     
+        width: '608px',
+        // height: '429px', 
+        title: 'Delete adverstiment?',
+        text: 'Are you sure you want to delete  “Cute dog looking for a home”? You can’t undo this action.',
+        image: {doggy},
         buttonColor: '#13d', 
         buttonText: 'confirm',
         onClose: '' ,
