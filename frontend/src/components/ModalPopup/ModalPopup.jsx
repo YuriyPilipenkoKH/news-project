@@ -3,8 +3,7 @@ import PropTypes from 'prop-types'; //GiCrossedSabres
 import { RxCross2 } from "react-icons/rx";
 
 import { BtnContainer,  ModalContainer, ModalImage, ModalOverlay, ModalText, ModalTitle, OnCloseButton } from './ModalPopup.styled';
-import { LogButton, RegButton } from '../Button/Button';
-import { iconPawprint } from '../../images/icons';
+
 
 export const ModalPopup = ({ width, height, title, text, image, buttonColor, buttonText, onClose, btn1, btn2 }) => {
     return (
