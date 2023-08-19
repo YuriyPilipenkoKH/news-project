@@ -5,10 +5,10 @@ import { RxCross2 } from "react-icons/rx";
 import { BtnContainer,  ModalContainer, ModalImage, ModalOverlay, ModalText, ModalTitle, OnCloseButton } from './ModalPopup.styled';
 
 
-export const ModalPopup = ({ width, height, title, text, image, buttonColor, buttonText, onClose, btn1, btn2 }) => {
+export const ModalPopup = ({  title, text, image, buttonColor, buttonText, onClose, btn1, btn2 }) => {
     return (
       <ModalOverlay>
-        <ModalContainer width={width} height={height}>
+        <ModalContainer >
           <ModalTitle>{title}</ModalTitle>
           {image && <ModalImage src={image} alt="Modal Image" />}
           <ModalText>{text}</ModalText>

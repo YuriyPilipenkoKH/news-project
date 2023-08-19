@@ -13,35 +13,67 @@ export const ModalOverlay = styled.div`
 `;
 
 export const ModalContainer = styled.div`
+  width: 280px;
+  height: 445px;
   position: relative;
   display: grid;
   place-items: center;
-  gap: 40px;  
+  gap: 20px;  
   background-color: white;
-  padding: 60px 40px;
-  border-radius: 40px;
-  width: ${props => props.width};
-  height: ${props => props.height};
+  padding: 60px 20px;
+  border-radius: 20px;
+  /* width: ${props => props.width};
+  height: ${props => props.height}; */
+
+  @media screen and (min-width: 768px) {
+    width: 608px;
+    height: 429px;
+    padding: 60px 40px;
+    border-radius: 40px;
+  }
 `;
 
 export const BtnContainer = styled.div`
     display: flex;
-    gap: 20px;
+    flex-direction: column;
+    gap: 12px;
+
+    &>button {
+        width: 240px;
+    }
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        gap: 22px;
+
+        &>button {
+        width: 165px;
+    }
+  }
 `;
 
 export const ModalTitle = styled.h2`
-  font-size: 36px;
+  font-size: 24px;
   font-weight: 500;
   margin: 0;
+
+  @media screen and (min-width: 768px) {
+    font-size: 36px;
+  }
 `;
 
 export const ModalText = styled.p`
-  font-size: 20px;
-  line-height: 28px;
+  font-size: 14px;
   font-weight: 500;
   text-align: center;
   margin: 0;
+  padding-bottom: 20px;
   border: none;
+
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+   padding: 0;
+  }
 `;
 
 export const ModalImage = styled.img`
@@ -61,8 +93,8 @@ export const ModalButton = styled.button`
 
 export const OnCloseButton = styled.button`
   position: absolute;
-  top: 24px;
-  right: 24px;
+  top: 16px;
+  right: 16px;
   width: 24px;
   height: 24px;
   background-color: transparent;
@@ -73,5 +105,15 @@ export const OnCloseButton = styled.button`
     color:#222;
     scale: 2;
 
+    &:hover {
+        color: var(--blue);
+    }
+
   }
+  @media screen and (min-width: 768px) {
+    top: 24px;
+    right: 20px;
+    
+  }
+
 `;
