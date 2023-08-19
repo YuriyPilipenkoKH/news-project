@@ -115,6 +115,29 @@ export const OnCloseButton = styled.button`
     top: 24px;
     right: 20px;
     
+  }  `;
+
+// type === 3
+export const PetList = styled.div`
+  display: grid;
+  grid-template-columns: 80px 60%;
+  grid-template-rows: repeat(8, 20px);
+  grid-column-gap: 18px;
+  grid-row-gap : 4px;
+
+  font-size: 12px;
+  font-weight: 500;
+
+&>p {
+  font-size: 14px;
+  font-weight: 600;
+}
+& > p:last-child {
+    /* Apply styles to increase the size of the last field */
+    font-size: 14px; 
+    grid-column: span 2; /* Expand the field to span two columns */
+
+
   }
 
-`;
+`

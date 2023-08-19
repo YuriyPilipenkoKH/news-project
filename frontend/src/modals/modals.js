@@ -7,6 +7,7 @@ import doggy from '../images/doggy.png';
 
 
 export const modal1 = {     
+        type: 1,
         width: '608px',
         // height: '429px', 
         title: 'Attention',
@@ -21,6 +22,7 @@ export const modal1 = {
 }
 
 export const modal2 = {     
+        type: 1,
         width: '608px',
         // height: '429px', 
         title: 'Delete adverstiment?',
@@ -36,15 +38,16 @@ export const modal2 = {
 
 
 export const modal3 = {     
+        type: 3,
         width: '608px',
         // height: '429px', 
-        title: 'Delete adverstiment?',
-        text: 'Are you sure you want to delete  “Cute dog looking for a home”? You can’t undo this action.',
+        title: 'Cute dog looking for a home',
+        text: '',
         image: {doggy},
         buttonColor: '#13d', 
         buttonText: 'confirm',
         onClose: '' ,
 
-        btn1:  <ButtonTransparent>Cacel</ButtonTransparent>,
-        btn2: <Button>Yes <RiDeleteBin6Line/> </Button>,
+        btn1:  <ButtonTransparent>Contact</ButtonTransparent>,
+        btn2: <Button>Add to <RiDeleteBin6Line/> </Button>,
 }
