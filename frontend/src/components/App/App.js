@@ -3,7 +3,7 @@ import {  AddToButton, Button,  ButtonTransparent,  ContactButton,  FilterButton
 import { MdOutlineLogout} from "react-icons/md";
 import { FaRegHeart } from "react-icons/fa";
 
-import { StyledLogo } from "../Button/Button.styled";
+// import { StyledLogo } from "../Button/Button.styled";
 import { Container } from "../Container/Container";
 // import LoginForm from "../Forms/LoginForm/LoginForm";
 // import RegisterForm from "../Forms/RegisterForm/RegisterForm";
@@ -29,7 +29,7 @@ const App =() => {
 
   return (
   <Container>
-    <StyledLogo>{iconLogo}</StyledLogo>
+    {/* <StyledLogo>{iconLogo}</StyledLogo> */}
     
  
     <Button onClick={() => {

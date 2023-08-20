@@ -1,5 +1,5 @@
 import styled, {  keyframes } from 'styled-components';
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 
 export const rotate = keyframes`
    0% {
@@ -294,29 +294,29 @@ transition: all 0.4s ease;
 `;
 
 
-export const StyledLink = styled(NavLink)`
+// export const StyledLink = styled(NavLink)`
 
-  transition:  color 1s ease-in-out;
-  font-weight: 600;
-  transition: 0.3s ease;
+//   transition:  color 1s ease-in-out;
+//   font-weight: 600;
+//   transition: 0.3s ease;
 
-  &.active {
-    color: #eee;
-    background-color: var(--green);
-  }
-`;
+//   &.active {
+//     color: #eee;
+//     background-color: var(--green);
+//   }
+// `;
 
-export const StyledLogo = styled(NavLink)`
-border: none;
-outline: none;
-background-color: transparent;
-padding: 12px 0;
+// export const StyledLogo = styled(NavLink)`
+// border: none;
+// outline: none;
+// background-color: transparent;
+// padding: 12px 0;
 
-&>:hover {
-  animation-duration: 0.1s;
-  animation: ${rotate} 1s ease;   
-  cursor: pointer;
+// &>:hover {
+//   animation-duration: 0.1s;
+//   animation: ${rotate} 1s ease;   
+//   cursor: pointer;
 
-}
+// }
 
-`
+// `
