@@ -1,22 +1,54 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { RxCross2 } from "react-icons/rx";
 
 
-import { BtnContainer,  ModalContainer, ModalImage, ModalOverlay, ModalText, ModalTitle, OnCloseButton, PetList } from './ModalPopup.styled';
+import { BtnContainer,  BtnContainer3,  ContentWrapp,  ModalCategory,  ModalContainer, ModalContainer3, ModalImage, ModalOverlay, ModalText, ModalTitle, ModalTitle3, OnCloseButton, PetList } from './ModalPopup.styled';
 
 const modalRoot = document.querySelector('#modal-root');
 
 
 export const ModalPopup = ({ type, title, text, image, buttonColor, buttonText, btn1, btn2 , onClose } ) => {
 
+  useEffect(() => {
+    const handleBackdropClick = (e) => {
+      if (e.target === e.currentTarget) {
+       return onClose();
+      }
+    };
+
+    const handleKeyDown = (e) => {
+      if (e.keyCode === 27) {
+       return onClose();
+      }
+    };
+
+    const body = document.body;
+    body.style.overflow = 'hidden';
+
+    window.addEventListener('click', handleBackdropClick);
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      body.style.overflow = 'unset';
+      window.removeEventListener('click', handleBackdropClick);
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [onClose]);
+
+  const handlePictureClick = (e) => {
+    e.stopPropagation();
+  };
 
 
-if (type === 1){
+
+if (type === 1 || type === 2 ){
   return  createPortal(
     <ModalOverlay>
-      <ModalContainer >
-        {/* {image && <ModalImage src={image.doggy} alt="Modal Image" />} */}
+      <ModalContainer 
+      onClick={handlePictureClick}
+      style={{height: type === 2 ? '350px' : '429px'}}>
+
         <ModalTitle>{title}</ModalTitle>
         <ModalText>{text}</ModalText>
         <BtnContainer>
@@ -32,28 +64,30 @@ if (type === 1){
 if (type === 3){
   return  createPortal(
     <ModalOverlay>
-      <ModalContainer style={{padding: "40px 20px 10px", height: '800px', display: 'flex', flexDirection: 'column'}} >
+      <ModalContainer3  >
         {image && <ModalImage src={image.doggy} alt="Modal Image" />}
-        <ModalTitle>{title}</ModalTitle>
+        <ModalCategory > {'in good hands'} </ModalCategory>
 
-        <PetList>
-          <p>Name:</p> {'Rich'}
-          <p>Birthday:</p> {'21.09.2020'}
-          <p>Type:</p>  {'Pomeranian'}
-          <p>Place:</p>  {'Lviv'}
-          <p>The sex:</p>  {'male'}
-          <p>Email:</p>  {'user@mail.com'}
-          <p>Phone:</p> {'+380971234567'}
-          <p>Comments:<span>{' Rich would be the perfect addition to an active family that loves to play and go on walks. I bet he would love having a doggy playmate too! '}</span> </p> 
+        <ContentWrapp>
+          <ModalTitle3 >{title}</ModalTitle3>
+          <PetList>
+            <p>Name:</p> {'Rich'}
+            <p>Birthday:</p> {'21.09.2020'}
+            <p>Type:</p>  {'Pomeranian'}
+            <p>Place:</p>  {'Lviv'}
+            <p>The sex:</p>  {'male'}
+            <p className='userContact'>Email:</p> <span>{'user@mail.com'}</span> 
+            <p className='userContact'>Phone:</p> <span>{'+380971234567'}</span> 
+            <p >Comments:<span>{' Rich would be the perfect addition to an active family that loves to play and go on walks. I bet he would love having a doggy playmate too! '}</span> </p>
+          </PetList>
+        </ContentWrapp>
 
-        </PetList>
-
-        <BtnContainer style={{marginTop: 'auto'}}>
+        <BtnContainer3 style={{marginTop: 'auto'}}>
           {btn1}
           {btn2}
-        </BtnContainer>
+        </BtnContainer3>
         <OnCloseButton onClick={onClose} ><RxCross2/></OnCloseButton>
-      </ModalContainer>
+      </ModalContainer3>
     </ModalOverlay>,
       modalRoot
   );

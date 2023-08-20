@@ -1,5 +1,5 @@
 import styled, {  keyframes } from 'styled-components';
-// import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export const rotate = keyframes`
    0% {
@@ -16,7 +16,6 @@ export const rotate = keyframes`
     }
 
 `
-
 
 
 export const buttonStyles =`
@@ -81,19 +80,19 @@ overflow: hidden;
 export const hoverStylesB =`
 & >svg {
 
-  fill: var(--fone-color);
+  fill: var(--white);
   }
 
   &:hover  {
   transition: all 0.4s ease; 
   background: linear-gradient(to right, var( --gradient-bl), var(--gradient-br));
-  color: var(--fone-color);
+  color: var(--white);
  }
 
 `
 export const hoverStylesTrB =`
 border: 2px solid var(--blue);
-background-color: var(--fone-color);
+background-color: var(--white);
 color: var(--blue);
 
 transition: all 0.4s ease; 
@@ -105,12 +104,12 @@ transition: all 0.4s ease;
   &:hover  {
   transition: all 0.4s ease; 
   background: linear-gradient(to right, #88c7fc, #4da5f3);
-  color: var(--fone-color);
+  color: var(--white);
   border: 2px solid transparent;
 
   & >svg {
     transition: all 0.4s ease; 
-    fill: var(--fone-color);
+    fill: var(--white);
 }
  }
 
@@ -118,36 +117,35 @@ transition: all 0.4s ease;
 export const hoverStylesY =`
 & >svg {
 
-  fill: var(--fone-color);
+  fill: var(--white);
   }
 
   &:hover  {
   transition: all 0.4s ease; 
   background: linear-gradient(to right, var( --gradient-yl), var(--gradient-yr));
-  color: var(--fone-color);
+  color: var(--white);
  }
 }
 `
 
 export const StyledButton = styled.button`
 
-
 ${buttonStyles} 
  ${ripple} 
  
  background-color: var(--blue);
- color: var(--fone-color);
+ color: var(--white);
  transition: all 0.4s ease; 
 
 & >svg {
 
-  fill: var(--fone-color);
+  fill: var(--white);
   }
 
   &:hover  {
   transition: all 0.4s ease; 
   background: linear-gradient(to right, var( --gradient-bl), var(--gradient-br));
-  color: var(--fone-color);
+  color: var(--white);
  }
 
 `;
@@ -157,7 +155,7 @@ ${buttonStyles}
 ${ripple} 
 
 border: 2px solid var(--blue);
-background-color: var(--fone-color);
+background-color: var(--white);
 color: var(--blue);
 transition: all 0.4s ease; 
 
@@ -168,12 +166,12 @@ transition: all 0.4s ease;
   &:hover  {
   transition: all 0.4s ease; 
   background: linear-gradient(to right, #88c7fc, #4da5f3);
-  color: var(--fone-color);
+  color: var(--white);
   border: 2px solid transparent;
 
   & >svg {
     transition: all 0.4s ease; 
-    fill: var(--fone-color);
+    fill: var(--white);
 }
  }
 
@@ -185,7 +183,7 @@ ${buttonStyles}
  ${ripple} 
  
  background-color: var(--yellow);
- color: var(--fone-color);
+ color: var(--white);
  width: 165px;
  
  ${hoverStylesY} 
@@ -196,7 +194,7 @@ ${buttonStyles}
  ${ripple} 
 
 border: 2px solid var(--yellow);
-background-color: var(--fone-color);
+background-color: var(--white);
 color: var(--yellow);
 width: 165px;
 transition: all 0.4s ease; 
@@ -215,7 +213,7 @@ ${ripple}
 
 border: 2px solid var(--blue);
 background-color: var(--blue);
-color: var(--fone-color);
+color: var(--white);
 width: 135px;
 
 ${hoverStylesB} 
@@ -245,7 +243,7 @@ ${ripple} ;
 
 border: 2px solid var(--blue);
 background-color: var(--blue);
-color: var(--fone-color);
+color: var(--white);
 width: 130px;
 
 ${hoverStylesB} ;
@@ -277,8 +275,6 @@ height: 38px;
 
 
 
-
-
 export const StyledRadioButton = styled.button`
 ${buttonStyles} 
  ${ripple} 
@@ -291,37 +287,26 @@ transition: all 0.4s ease;
 
 &>active{
   background-color: var(--blue);
-  color: var(--fone-color);
+  color: var(--white);
   transition: all 0.4s ease; 
 }
-
 
 `;
 
 
+export const StyledLink = styled(NavLink)`
 
+  transition:  color 1s ease-in-out;
+  font-weight: 600;
+  transition: 0.3s ease;
 
+  &.active {
+    color: #eee;
+    background-color: var(--green);
+  }
+`;
 
-
-
-// export const StyledLink = styled(NavLink)`
-
-
-//   transition:  color 1s ease-in-out;
-
-//   font-weight: 600;
-//   transition: 0.3s ease;
-
-
-
-//   &.active {
-//     color: #eee;
-//     background-color: var(--green);
-
-//   }
-// `;
-
-export const StyledLogo = styled.button`
+export const StyledLogo = styled(NavLink)`
 border: none;
 outline: none;
 background-color: transparent;
@@ -333,6 +318,5 @@ padding: 12px 0;
   cursor: pointer;
 
 }
-
 
 `

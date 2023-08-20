@@ -3,6 +3,7 @@ import { Button, ButtonTransparent, LogButton, RegButton } from "../components/B
 import { iconPawprint } from "../images/icons";
 import { RiDeleteBin6Line } from 'react-icons/ri';
 import doggy from '../images/doggy.png';
+import { FaRegHeart } from "react-icons/fa";
 
 
 
@@ -15,14 +16,13 @@ export const modal1 = {
         image: '',
         buttonColor: '#13d', 
         buttonText: 'confirm',
-        onClose: '' ,
-
+       
         btn1: <LogButton>Log IN {iconPawprint}</LogButton>,
         btn2:  <RegButton>Registration </RegButton>,
 }
 
 export const modal2 = {     
-        type: 1,
+        type: 2,
         width: '608px',
         // height: '429px', 
         title: 'Delete adverstiment?',
@@ -30,8 +30,7 @@ export const modal2 = {
         image: '',
         buttonColor: '#13d', 
         buttonText: 'confirm',
-        onClose: '' ,
-
+        
         btn1:  <ButtonTransparent>Cacel</ButtonTransparent>,
         btn2: <Button>Yes <RiDeleteBin6Line/> </Button>,
 }
@@ -46,8 +45,7 @@ export const modal3 = {
         image: {doggy},
         buttonColor: '#13d', 
         buttonText: 'confirm',
-        onClose: '' ,
-
+        
         btn1:  <ButtonTransparent>Contact</ButtonTransparent>,
-        btn2: <Button>Add to <RiDeleteBin6Line/> </Button>,
+        btn2: <Button>Add to <FaRegHeart/> </Button>,
 }
