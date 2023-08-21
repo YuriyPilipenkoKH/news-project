@@ -1,4 +1,4 @@
-import { iconFilter, iconLogo, iconMenuHamburger, iconPawprint } from "../../images/icons";
+import { iconFilter,  iconMenuHamburger, iconPawprint } from "../../images/icons";
 import {  AddToButton, Button,  ButtonTransparent,  ContactButton,  FilterButton,  LearnButton,  LogButton,  OutButton,  RadioButton,  RegButton  } from "../Button/Button";
 import { MdOutlineLogout} from "react-icons/md";
 import { FaRegHeart } from "react-icons/fa";

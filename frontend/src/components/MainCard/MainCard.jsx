@@ -1,8 +1,10 @@
 
-import { iconClock, iconFem, iconMap } from "../../images/icons";
-import { ButtonTransparent } from "../Button/Button"
+import { iconClock, iconFem, iconHeart, iconMap } from "../../images/icons";
+import { ButtonTransparent, FavButton } from "../Button/Button"
 import { Tab } from "../Tab/Tab"
 import { CardTitle, CardWrapper, ImgWrapper } from "./MainCard.styled"
+import { CategoryWrapp } from "../Tab/Tab.styled";
+
 
 
 export const MainCard = ( ) => {
@@ -10,12 +12,12 @@ export const MainCard = ( ) => {
 return(
     <CardWrapper>
       <ImgWrapper>
-        <div> {'In good hands'} </div>
-        <button></button>
+        <CategoryWrapp className='category'> {'In good hands'} </CategoryWrapp>
+        <FavButton className='fav'> {iconHeart}</FavButton>
 
-        <Tab text= {'Ivano'} icon = {iconMap}/>
-        <Tab text= {'1 year'} icon = {iconClock}/>
-        <Tab text= {'female'} icon = {iconFem}/>
+        <Tab className="tab1" text= {'Ivano'} icon = {iconMap}  ></Tab>
+        <Tab className='tab2' text= {'1 year'} icon = {iconClock }  ></Tab>
+        <Tab className='tab3' text= {'female'} icon = {iconFem}  ></Tab>
     
 
       </ImgWrapper>

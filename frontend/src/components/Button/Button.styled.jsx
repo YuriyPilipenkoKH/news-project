@@ -229,6 +229,21 @@ transform: rotate(180deg);
 
 `;
 
+export const StyledFavButton = styled.button`
+
+${ripple} 
+${hoverStylesTrB} 
+
+display: grid;
+place-items: center;
+width: 40px;
+height: 40px;
+border-radius: 50%;
+border: none;
+background-color: var(--light-blue);
+cursor: pointer;
+`
+
 export const StyledFilterButton = styled.button`
 ${buttonStyles} 
 ${ripple} 

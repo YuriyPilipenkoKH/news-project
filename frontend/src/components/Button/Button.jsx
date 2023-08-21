@@ -1,4 +1,4 @@
-import {  StyleAddToButton, StyledButton, StyledButtonTransparent,  StyledContactButton,  StyledFilterButton,  StyledLearnButton,  StyledLogButton, StyledOutButton, StyledRadioButton, StyledRegButton } from './Button.styled';
+import {  StyleAddToButton, StyledButton, StyledButtonTransparent,  StyledContactButton,  StyledFavButton,  StyledFilterButton,  StyledLearnButton,  StyledLogButton, StyledOutButton, StyledRadioButton, StyledRegButton } from './Button.styled';
 
 export const Button = ({ children, ...props }) => {
   return <StyledButton type='button' {...props}> {children}</StyledButton>;
@@ -37,6 +37,10 @@ export const ContactButton = ({ children, ...props }) => {
 
 export const LearnButton = ({ children, ...props }) => {
   return <StyledLearnButton type='button' {...props}> {children}</StyledLearnButton>;
+};
+
+export const FavButton = ({ children, ...props }) => {
+  return <StyledFavButton type='button' {...props}> {children}</StyledFavButton>;
 };
 
 
