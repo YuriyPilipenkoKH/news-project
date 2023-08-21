@@ -12,6 +12,7 @@ import UniversalButton from "../UniversalButton/UniversalButton";
 import { ModalPopup } from "../ModalPopup/ModalPopup";
 import { modal1, modal2, modal3 } from "../../modals/modals";
 import { useState } from "react";
+import { MainCard } from "../MainCard/MainCard";
 
 const App =() => {
   const [showModal, setShowModal] = useState(false);
@@ -62,6 +63,10 @@ const App =() => {
     {showModal && (
         <ModalPopup {...modals} onClose ={onModalClose}  /> //  onClose ={onModalClose}   {...modal1} 
     )}
+
+      <MainCard></MainCard>
+
+
   </Container>
   );  
 }

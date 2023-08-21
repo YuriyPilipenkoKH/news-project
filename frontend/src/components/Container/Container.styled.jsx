@@ -7,18 +7,18 @@ export const MainContainer = styled.div`
     /* justify-items: center; */
     grid-gap: 25px;
     background-color: var(--white-bg);
-    padding: 20px;
+    padding: 20px ;
     margin: 0 auto;
     outline: 1px solid crimson;
     width: 320px;
 
       @media screen and (min-width: 768px) {
-      padding: 0 32px;
+      padding:  32px;
       width: 768px;
     }
 
       @media screen and (min-width: 1280px) {
-        padding: 0 16px;
+        padding: 32px;
         width: 1280px;
     }
 `
