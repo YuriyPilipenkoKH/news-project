@@ -6,23 +6,64 @@ export const RadioWrapp = styled.div`
 `
 
 export const RadioInput = styled.div`
-  background-color: var(--green);
-  color: white;
-  border-color: var(--red);
+ display: none;
 
-  &:checked + label {
-  background-color: var(--selected-bg-color);
-  color: var(--selected-text-color);
-  }
+ &:checked + label {
+  color: #48AC53
+}
+
+&:checked + label:after {
+  left: 0;
+  right: 0;
+  color: #48AC53;
+}
+
 `
 export const RadioLabel = styled.div`
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: var(--button-bg-color);
-  color: var(--button-text-color);
-  border: none;
-  border-radius: 20px;
+  display: block;
+  font-family: sans-serif;
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  line-height: 1.5em;
+  width: 2em;
+  margin: .5em;
+  height: 1.5em;
+  padding: 0 1em;
+  border-radius: .75em;
+  position: relative;
+  overflow: hidden;
+  transition: color 500ms;
   cursor: pointer;
-  transition: all 0.3s ease;
+
+  &:before{
+    content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #DDDCDF;
+  z-index: -2;
+  }
+
+  &:after {
+    content: "\f00c";
+  text-align: right;
+  padding-right: .5em;
+  position: absolute;
+  font-family: FontAwesome;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  right: 100%;
+  border-radius: .75em;
+  background-color: #98ECA3;
+  color: #98ECA3;
+  z-index: -1;
+  transition-property: left, right, color;
+  transition-duration: 500ms;
+  }
+
 `
 
