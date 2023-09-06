@@ -7,6 +7,8 @@ const cors = require("cors");
 require('dotenv').config()
 
 const authRouter = require("./routes/api/users");
+const newsRouter = require("./routes/api/news");
+
 // const noticeRouter = require("./routes/api/notices");
 // const MyPetRouter = require('./routes/api/myPet');
 
@@ -25,6 +27,8 @@ app.use(express.urlencoded({extended: false}));
 // app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.use("/users", authRouter);
+
+app.use("/news", newsRouter);
 
 // app.use("/notices", noticeRouter);
 

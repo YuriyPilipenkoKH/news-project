@@ -10,6 +10,7 @@ const {
   BIRTHDAY_REGEX,
   PHONE_NUMBER_REGEX,
 } = require("../constants/regex");
+console.log('schema')
 
 const userSchema = new Schema(
   {
@@ -51,7 +52,7 @@ const userSchema = new Schema(
   { versionKey: false, timestamps: true }
 );
 
-userSchema.post("save", handleMongooseError);
+// userSchema.post("save", handleMongooseError);
 const User = model("users", userSchema);
 
 const registerSchema = Joi.object({

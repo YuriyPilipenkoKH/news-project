@@ -7,6 +7,7 @@ const { validateBody, authenticate, upload } = require("../../middlewares");
 const { userSchemas } = require("../../models");
 
 const router = express.Router();
+console.log('users')
 
 router.post(
   "/auth/register",
