@@ -1,4 +1,6 @@
-require("dotenv").config();
+
+require('dotenv').config()
+
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
@@ -9,6 +11,7 @@ const { httpError } = require("../../helpers");
 const { User } = require("../../models");
 
 const { SECRET_KEY } = process.env;
+console.log(SECRET_KEY)
 
 const register = async (req, res) => {
   const { email, password } = req.body;

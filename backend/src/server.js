@@ -1,8 +1,15 @@
 const mongoose = require("mongoose");
 
-const app = require("./app");
 
-const { DB_HOST, PORT = 5000 } = process.env;
+const app = require("./app");
+const path = require('path')
+const configPath = path.join(__dirname, '..' , '.env')
+require('dotenv').config({path:configPath})
+
+
+
+const { DB_HOST, PORT = 5000} = process.env;
+
 mongoose.set("strictQuery", true);
 
 mongoose
@@ -17,3 +24,5 @@ mongoose
     console.log(error.message);
     process.exit(1);
   });
+
+
