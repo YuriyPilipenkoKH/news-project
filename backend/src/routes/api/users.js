@@ -21,16 +21,16 @@ router.post(
   ctrl.login
 );
 
-// router.get("/current", authenticate, ctrl.getCurrentUser);
+router.get("/current", authenticate, ctrl.getCurrentUser);
 
-// router.post("/logout", authenticate, ctrl.logout);
+router.post("/logout", authenticate, ctrl.logout);
 
-// router.patch(
-//   "/update",
-//   authenticate,
-//   upload.single("avatar"),
-//   validateBody(userSchemas.updateUserSchema),
-//   ctrl.updateUserInfo
-// );
+router.patch(
+  "/update",
+  authenticate,
+  upload.single("avatar"),
+  validateBody(userSchemas.updateUserSchema),
+  ctrl.updateUserInfo
+);
 
 module.exports = router;

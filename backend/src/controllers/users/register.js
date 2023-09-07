@@ -14,15 +14,14 @@ const { SECRET_KEY } = process.env;
 // console.log(SECRET_KEY)
 
 const register = async (req, res) => {
-  console.log('register ')
+
   const { email, password } = req.body;
-  console.log('req.body',req.body)
   const user = await User.findOne({ email });
 
   if (user) throw httpError(409, "Email in use");
 
   const hashPass = await bcrypt.hash(password, 10);
-  const avatarURL = gravatar.url(email);
+  const avatarURL ="https://res.cloudinary.com/dozyx4svd/image/upload/v1693037240/avatars/default_avatar.png";
 
   const newUser = await User.create({
     ...req.body,

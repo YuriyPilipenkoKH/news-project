@@ -6,10 +6,12 @@ const { httpError } = require("../../helpers");
 const { User } = require("../../models");
 
 const { SECRET_KEY } = process.env;
+// console.log('login', SECRET_KEY)
 
 const login = async (req, res) => {
   const { email, password } = req.body;
   const user = await User.findOne({ email });
+  console.log('user1213', user)
   if (!user) throw httpError(401, "Email or password is wrong");
 
   const passCompare = await bcrypt.compare(password, user.password);

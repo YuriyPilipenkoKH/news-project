@@ -1,11 +1,13 @@
-const { addMyPet } = require('./addMyPet');
-const { removeMyPet } = require('./removeMyPet');
-const { getMyPet } = require('./getMyPet');
-const { addAvatar } = require('./addAvatar');
+const expressAsyncHandler = require('express-async-handler');
+const  addPet  = require('./addPet');
+// const { removeMyPet } = require('./removeMyPet');
+// const { getMyPet } = require('./getMyPet');
+// const { addAvatar } = require('./addAvatar');
+
 
 module.exports = {
-  addMyPet,
-  removeMyPet,
-  getMyPet,
-  addAvatar,
+  addPet: expressAsyncHandler(addPet),
+  // removeMyPet,
+  // getMyPet,
+  // addAvatar,
 };

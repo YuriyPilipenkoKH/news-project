@@ -10,7 +10,7 @@ const authRouter = require("./routes/api/users");
 const newsRouter = require("./routes/api/news");
 
 // const noticeRouter = require("./routes/api/notices");
-// const MyPetRouter = require('./routes/api/myPet');
+const MyPetRouter = require('./routes/api/myPet');
 
 
 const app = express();
@@ -20,7 +20,7 @@ const formatsLogger = app.get("env") === "development" ? "dev" : "short";
 app.use(logger(formatsLogger));
 app.use(cors());
 app.use(express.json());
-app.use(express.urlencoded({extended: false}));
+// app.use(express.urlencoded({extended: false}));
 
 // app.use(express.static("public"));
 
@@ -32,7 +32,7 @@ app.use("/news", newsRouter);
 
 // app.use("/notices", noticeRouter);
 
-// app.use('/pets', MyPetRouter);
+app.use('/pets', MyPetRouter);
 
 app.use((req, res) => {
   res.status(404).json({ message: "Not found" });

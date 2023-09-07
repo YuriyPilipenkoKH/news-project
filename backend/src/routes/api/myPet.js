@@ -1,29 +1,31 @@
 const express = require('express');
+const { petSchemas } = require('../../models/pet');
+const ctrl = require('../../controllers/pet')
 
 const router = express.Router();
 
 const {
   removeMyPet,
-  addMyPet,
+  addPet,
   getMyPet,
 } = require('../../controllers/pet/index');
 
-const { joiSchema } = require('../../models/pet');
 const {
   upload,
-  validation,
+  validateBody,
+  isValidId,
   authenticate,
 } = require('../../middlewares/index');
 
 router.post(
   '/',
   authenticate,
-  validation(joiSchema),
-  upload.single('image'),
-  addMyPet
+  upload.single('petAvatar'),
+  validateBody(petSchemas.addPetSchema),
+  ctrl.addPet
 );
-router.get('/', authenticate, getMyPet);
+// router.get('/', authenticate, getMyPet);
 
-router.delete('/:petId', authenticate, removeMyPet);
+// router.delete('/:petId', authenticate, removeMyPet);
 
 module.exports = router;

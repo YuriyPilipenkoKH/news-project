@@ -19,7 +19,6 @@
   "bugs": {
     "url": "https://github.com/YuriyPilipenkoKH/news-project/issues"
   },
-  
   "homepage": "https://github.com/YuriyPilipenkoKH/news-project#readme",
   "dependencies": {
     "bcrypt": "^5.1.1",
@@ -36,11 +35,10 @@
     "mongoose": "^7.4.3",
     "morgan": "^1.10.0",
     "multer": "^1.4.5-lts.1",
+    "multer-storage-cloudinary": "^4.0.0",
     "nanoid": "^4.0.2",
     "nodemon": "^3.0.1",
-    "swagger-ui-express": "^5.0.0",
-    "react-icons": "^4.10.1"
+    "react-icons": "^4.10.1",
+    "swagger-ui-express": "^5.0.0"
   }
-
-
 }
