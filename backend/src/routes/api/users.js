@@ -15,11 +15,11 @@ router.post(
  ctrl.register
 );
 
-// router.post(
-//   "/auth/login",
-//   validateBody(userSchemas.loginSchema),
-//   ctrl.login
-// );
+router.post(
+  "/auth/login",
+  validateBody(userSchemas.loginSchema),
+  ctrl.login
+);
 
 // router.get("/current", authenticate, ctrl.getCurrentUser);
 
